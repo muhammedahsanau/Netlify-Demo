@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/muhammedahsanau/Netlify-Demo#readme",
   "dependencies": {
+    "axios": "^0.21.4",
     "netlify-lambda": "^2.0.14"
   }
 }
