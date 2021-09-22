@@ -6,7 +6,7 @@ exports.handler = async function (event, context, callback) {
   if (event.httpMethod == "GET") {
   
       callback(null, {
-      statusCode: 200,
+      statusCode: 200, 
       body: JSON.stringify({
         data: data.data,
       }),
