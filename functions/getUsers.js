@@ -19,10 +19,16 @@ exports.handler = async function (event, context, callback) {
         msg: "This was a POST request",
       }),
     });
-  } else {
+  } else if(event.httpMethod == "PUT") {
     callback(null, {
       statusCode: 200,
-      body: "This was a DELETE or PUT request ",
+      body: "This was a  PUT request ",
+    });
+  }
+  else if(event.httpMethod == "DELETE") {
+    callback(null, {
+      statusCode: 200,
+      body: "This was a DELETE  request ",
     });
   }
 };
