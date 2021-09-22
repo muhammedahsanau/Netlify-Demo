@@ -4,6 +4,7 @@
   "description": "this is demo or netlify (locally)",
   "main": "index.js",
   "scripts": {
+    "prod":"npm run build; npm run build:lambda",
     "lambda-serve": "netlify-lambda serve functions",
     "lambda-build": "netlify-lambda build functions"
   },
