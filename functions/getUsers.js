@@ -4,10 +4,10 @@ exports.handler = async function (event, context, callback) {
   const data = await axios("https://api.publicapis.org/entries");
   console.log(context, "Muhammad Ahsan");
   if (event.httpMethod == "GET") {
-    callback(null, {
+  
+      callback(null, {
       statusCode: 200,
       body: JSON.stringify({
-        msg: "This was a GET request",
         data: data.data,
       }),
     });
