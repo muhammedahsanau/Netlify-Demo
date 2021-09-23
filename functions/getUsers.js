@@ -10,7 +10,7 @@ exports.handler = async function (event, context, callback) {
       body: JSON.stringify({
         msg: "Following is the api response from the public animal names apis ",
         // data: data.data,
-        data:event.body.data
+        data:event.body
       }),
     });
   } else if (event.httpMethod == "POST") {
@@ -18,7 +18,7 @@ exports.handler = async function (event, context, callback) {
       statusCode: 200,
       body: JSON.stringify({
         msg: "This was a POST request",
-        data:event.body
+        data:event.body.data
       }),
     });
   } else if(event.httpMethod == "PUT") {
