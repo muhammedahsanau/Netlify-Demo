@@ -10,7 +10,7 @@ exports.handler = async function (event, context, callback) {
       body: JSON.stringify({
         msg: "Following is the api response from the public animal names apis ",
         // data: data.data,
-        data:event.body
+        data:event.body.data
       }),
     });
   } else if (event.httpMethod == "POST") {
