@@ -18,7 +18,7 @@ exports.handler = async function (event, context, callback) {
       statusCode: 200,
       body: JSON.stringify({
         msg: "This was a POST request",
-        data:event.body.body
+        data:event.body
       }),
     });
   } else if(event.httpMethod == "PUT") {
