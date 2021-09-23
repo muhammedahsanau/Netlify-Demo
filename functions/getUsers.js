@@ -2,7 +2,7 @@ const axios = require("axios");
  
 exports.handler = async function (event, context, callback) {
   // const data = await axios("https://api.publicapis.org/entries");
-  console.log(event.body);
+
   console.log(context, "Muhammad Ahsan");
   if (event.httpMethod == "GET") {
       callback(null, {
@@ -14,6 +14,7 @@ exports.handler = async function (event, context, callback) {
       }),
     });
   } else if (event.httpMethod == "POST") {
+    console.log(event.body);
     callback(null, {
       statusCode: 200,
       body: JSON.stringify({
